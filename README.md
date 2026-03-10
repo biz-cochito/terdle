@@ -7,3 +7,5 @@
 - [ ] alternative color settings for terminals with incompatible color schemes
 - [ ] title animation
 - [ ] different word-length modes
+- [ ] restrict guesses to valid words
+- [ ] separate lists for valid guesses and potential target words
