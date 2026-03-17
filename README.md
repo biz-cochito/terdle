@@ -2,7 +2,7 @@
 
 ## Installation
 
-**Using pip w/ venv**
+**Using pip**
 ```bash
 git clone https://github.com/bis-1/terdle.git
 cd terdle
