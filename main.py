@@ -10,6 +10,9 @@ def load_words(file_path):
 
 def play_game():
     words = load_words("word-lists/5-letters.txt")
+    valid_guesses = load_words("word-lists/5-valid.txt")
+    
+    valid_words = set(w.upper() for w in words + valid_guesses)
     word = random.choice(words).upper()
 
     clear_terminal()
@@ -24,6 +27,10 @@ def play_game():
 
         if len(guess) != len(word):
             print(f"Please enter a {len(word)}-letter word.")
+            continue
+
+        if guess not in valid_words:
+            print("Invalid word. Please try again.")
             continue
 
         attempt += 1

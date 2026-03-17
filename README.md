@@ -35,7 +35,7 @@ Run the game with `python main.py` or `uv run main.py`.
 - [ ] alternative color settings for terminals with incompatible color schemes
 - [x] title animation
 - [ ] different word-length modes
-- [ ] restrict guesses to valid words
-- [ ] separate word lists for valid guesses and potential target words
+- [x] restrict guesses to valid words
+- [x] separate word lists for valid guesses and potential target words
 - [ ] keyboard shortcut to exit the game
 - [ ] keyboard shortcut to return to the main menu
