@@ -15,6 +15,7 @@ def main():
 
     clear_terminal()
 
+    terds.animate_title()
     terds.welcome()
 
     attempts = 6

@@ -1,10 +1,7 @@
-from rich.text import Text
 from .theme import console
 
 
 def welcome():
-    title = Text(" T E R D L E ", style="bold white on cyan")
-    console.print(title)
     console.print("You have 6 attempts to guess the word.")
     console.print(
         "- [black on green] G R E E N [/black on green]: correct letter in the correct position"
