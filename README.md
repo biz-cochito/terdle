@@ -1,5 +1,7 @@
 # TERDLE
 
+![Terdle Title](images/title.gif)
+
 ## Installation
 
 **Using pip**
