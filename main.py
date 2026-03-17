@@ -1,10 +1,6 @@
-import os
 import random
-from rich.console import Console
-from rich.style import Style
-from rich.text import Text
-from terds import *
-from terds import welcome
+import terds
+from util.shell_commands import clear_terminal
 
 
 def load_words(file_path):
@@ -13,30 +9,13 @@ def load_words(file_path):
     return words
 
 
-def welcome():
-    console = Console()
-    title = Text("TERDLE", style="bold white on cyan")
-    console.print(title)
-    console.print("You have 6 attempts to guess the word.")
-    console.print(
-        "- [black on green]Green[/black on green]: correct letter in the correct position"
-    )
-    console.print(
-        "- [black on yellow]Yellow[/black on yellow]: correct letter in the wrong position"
-    )
-    console.print("- [black on white]White[/black on white]: incorrect letter")
-    # print()
-
-
 def main():
     words = load_words("words.txt")
     word = random.choice(words).upper()
 
-    console = Console()
+    clear_terminal()
 
-    welcome()
-
-    os.system("cls" if os.name == "nt" else "clear")
+    terds.welcome()
 
     attempts = 6
     attempt = 0
@@ -49,14 +28,14 @@ def main():
 
         attempt += 1
 
-        feedback = score_guess(word, guess)
-        console.print(feedback)
+        feedback = terds.score_guess(word, guess)
+        terds.console.print(feedback)
 
-        if is_win(word, guess):
-            display_win()
+        if terds.is_win(word, guess):
+            terds.display_win()
             break
     else:
-        display_lose(word)
+        terds.display_lose(word)
 
 
 if __name__ == "__main__":
