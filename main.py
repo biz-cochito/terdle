@@ -1,4 +1,5 @@
 import random
+import readline
 import terds
 from util.shell_commands import clear_terminal
 import questionary

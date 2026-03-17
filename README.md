@@ -32,7 +32,7 @@ Run the game with `python main.py` or `uv run main.py`.
 
 ## To do
 
-- [ ] allow cursor movement with arrow keys on guess input
+- [x] allow cursor movement with arrow keys on guess input
 - [x] start menu
 - [ ] alternative color settings for terminals with incompatible color schemes
 - [x] title animation
