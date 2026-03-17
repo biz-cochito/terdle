@@ -57,7 +57,11 @@ def main():
         clear_terminal()
         terds.animate_title()
         
-        terds.console.print("\n[bold cyan]--- Main Menu ---[/bold cyan]")
+        terds.console.print("[bold cyan]--- Main Menu ---[/bold cyan]")
+        
+        custom_style = questionary.Style([
+            ('instruction', 'fg:#808080')
+        ])
         
         choice = questionary.select(
             "",
@@ -68,7 +72,8 @@ def main():
             ],
             qmark="?",
             pointer=">",
-            instruction="(Use arrow keys to move, Enter to select)"
+            instruction="(Use arrow keys to move, Enter to select)",
+            style=custom_style
         ).ask()
         
         if choice == 'Play':
