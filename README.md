@@ -6,7 +6,7 @@
 
 **Using pip**
 ```bash
-git clone https://github.com/bis-1/terdle.git
+git clone https://github.com/biz-cochito/terdle.git
 cd terdle
 python -m venv .venv
 source .venv/bin/activate
@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 **Using uv**
 ```bash
-git clone https://github.com/bis-1/terdle.git
+git clone https://github.com/biz-cochito/terdle.git
 cd terdle
 uv venv
 source .venv/bin/activate
