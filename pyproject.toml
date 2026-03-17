@@ -4,4 +4,7 @@ version = "0.1.0"
 description = "worlde for the terminal"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = ["rich>=14.3.3"]
+dependencies = [
+    "questionary>=2.1.1",
+    "rich>=14.3.3",
+]

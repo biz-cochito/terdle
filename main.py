@@ -1,16 +1,15 @@
 import random
 import terds
 from util.shell_commands import clear_terminal
-
+import questionary
 
 def load_words(file_path):
     with open(file_path, "r") as f:
         words = [line.strip() for line in f if len(line.strip()) == 5]
     return words
 
-
-def main():
-    words = load_words("words.txt")
+def play_game():
+    words = load_words("word-lists/5-letters.txt")
     word = random.choice(words).upper()
 
     clear_terminal()
@@ -37,7 +36,42 @@ def main():
             break
     else:
         terds.display_lose(word)
+        
+    input("\nPress Enter to return to the main menu...")
 
+def show_settings():
+    clear_terminal()
+    terds.animate_title()
+    terds.console.print("\n[bold yellow]Settings menu coming soon...[/bold yellow]")
+    input("\nPress Enter to return to the main menu...")
+
+def main():
+    while True:
+        clear_terminal()
+        terds.animate_title()
+        
+        terds.console.print("\n[bold cyan]--- Main Menu ---[/bold cyan]")
+        
+        choice = questionary.select(
+            "",
+            choices=[
+                "Play",
+                "Settings",
+                "Quit"
+            ],
+            qmark="?",
+            pointer=">",
+            instruction="(Use arrow keys to move, Enter to select)"
+        ).ask()
+        
+        if choice == 'Play':
+            play_game()
+        elif choice == 'Settings':
+            show_settings()
+        elif choice == 'Quit' or choice is None: # None if user presses Ctrl+C
+            clear_terminal()
+            terds.console.print("[bold green]Goodbye![/bold green]")
+            break
 
 if __name__ == "__main__":
     main()
