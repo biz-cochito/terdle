@@ -37,7 +37,7 @@ def play_game():
     else:
         terds.display_lose(word)
         
-    input("\nPress Enter to return to the main menu...")
+    input("Press Enter to return to the main menu...")
 
 def show_settings():
     clear_terminal()
