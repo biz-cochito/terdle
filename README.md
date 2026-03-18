@@ -33,14 +33,15 @@ Run the game with `uv run main.py`.
 
 - [x] allow cursor movement with arrow keys on guess input
 - [ ] "?" key to show keyboard shortcuts
-- [ ] keyboard shortcut to exit the game
-- [ ] keyboard shortcut to return to the main menu
+- [ ] kb shortcut to exit the game
+- [ ] kb shortcut to return to the main menu
+- [ ] kb shortcut to redraw UI
 
 ### Settings and configuration
+
 - [ ] color themes
 - [ ] choose word length
 - [ ] disable animation
-
 
 ### Stats
 
