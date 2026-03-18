@@ -3,6 +3,7 @@
 # TERDLE
 
 ## Installation
+
 ```bash
 git clone https://github.com/biz-cochito/terdle.git
 cd terdle
@@ -14,18 +15,22 @@ Run the game with `uv run main.py`.
 ## To do
 
 ### Game logic
+
 - [x] correct handling of duplicate letters
 - [x] restrict guesses to valid words
 - [x] separate word lists for valid guesses and potential target words
 
 ### UI
+
 - [x] start menu
 - [x] title animation
 - [x] display available letters
 - [ ] center terminal output
-- [ ] animate win message
+- [ ] animate winning guess
+- [ ] highlight active selection in start menu
 
 ### Input
+
 - [x] allow cursor movement with arrow keys on guess input
 - [ ] "?" key to show keyboard shortcuts
 - [ ] keyboard shortcut to exit the game
@@ -34,12 +39,14 @@ Run the game with `uv run main.py`.
 ### Settings and configuration
 - [ ] color themes
 - [ ] choose word length
+- [ ] disable animation
+
 
 ### Stats
+
 - [ ] win/loss ratio
 - [ ] current winning streak
 - [ ] longest winning streak
 - [ ] guess distribution
 - [ ] average guesses
 - [ ] total games played
-

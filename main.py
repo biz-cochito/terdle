@@ -28,6 +28,15 @@ def play_game():
         terds.draw_alphabet(absent_letters)
         guess = input(f"Attempt {attempt + 1}/{attempts}: ").upper()
 
+        # explicit quit commands
+        if guess in ('/Q', '/QUIT', '!Q', '!QUIT'):
+            terds.console.print("[yellow]Returning to main menu...[/yellow]")
+            terds.clear_alphabet()
+            import time
+            time.sleep(1)
+            return
+
+
         if len(guess) != len(word):
             print(f"Please enter a {len(word)}-letter word.")
             continue
@@ -104,4 +113,8 @@ def main():
             break
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except (KeyboardInterrupt, EOFError):
+        clear_terminal()
+        terds.console.print("\n[bold green]Goodbye![/bold green]")
