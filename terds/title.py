@@ -22,14 +22,12 @@ def animate_title():
     with Live(
         get_frame(), console=console, refresh_per_second=20, transient=False
     ) as live:
-        # Play animation for about 1.5 seconds
+        # play animation for about 1.5 seconds
         for _ in range(20):
             time.sleep(0.08)
             live.update(get_frame())
 
-        # Settle on final all-green title
+        # settle on all green
         live.update(get_frame(final=True))
         time.sleep(0.5)
-
-    # Empty line for spacing before instructions
     console.print()

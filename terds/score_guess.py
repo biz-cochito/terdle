@@ -8,13 +8,13 @@ def score_guess(word, guess):
     feedback = [None] * len(word)
     feedback_terd = Text()
 
-    # Pass 1: find exact matches (Green)
+    # pass 1: find exact matches (green)
     for i in range(len(word)):
         if guess[i] == word[i]:
             feedback[i] = terd_green(guess[i])
             letter_count[guess[i]] -= 1
 
-    # Pass 2: find present but wrong position (Yellow) and absent (White)
+    # pass 2: find present but wrong position (yellow) and absent (white)
     for i in range(len(word)):
         if feedback[i] is None:
             if guess[i] in word and letter_count[guess[i]] > 0:

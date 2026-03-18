@@ -61,6 +61,12 @@ def show_settings():
     terds.console.print("\n[bold yellow]Settings menu coming soon...[/bold yellow]")
     input("\nPress Enter to return to the main menu...")
 
+def show_stats():
+    clear_terminal()
+    terds.animate_title()
+    terds.console.print("\n[bold yellow]Stats menu coming soon...[/bold yellow]")
+    input("\nPress Enter to return to the main menu...")
+
 def main():
     while True:
         clear_terminal()
@@ -76,6 +82,7 @@ def main():
             "",
             choices=[
                 "Play",
+                "Stats",
                 "Settings",
                 "Quit"
             ],
@@ -87,6 +94,8 @@ def main():
         
         if choice == 'Play':
             play_game()
+        elif choice == 'Stats':
+            show_stats()
         elif choice == 'Settings':
             show_settings()
         elif choice == 'Quit' or choice is None: # None if user presses Ctrl+C

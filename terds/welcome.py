@@ -9,5 +9,4 @@ def welcome():
     console.print(
         "- [black on yellow] Y E L L O W [/black on yellow]: correct letter in the wrong position"
     )
-    console.print("- [black on white] W H I T E [/black on white]: incorrect letter")
-    print("\n")
+    console.print("- [black on white] W H I T E [/black on white]: incorrect letter\n")
