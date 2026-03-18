@@ -3,32 +3,13 @@
 ![Terdle Title](images/title.gif)
 
 ## Installation
-
-**Using pip**
 ```bash
 git clone https://github.com/biz-cochito/terdle.git
 cd terdle
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+uv sync
 ```
 
-**Using uv**
-```bash
-git clone https://github.com/biz-cochito/terdle.git
-cd terdle
-uv venv
-source .venv/bin/activate
-uv pip install -r requirements.txt
-```
-
-## Running the Game
-
-In the `terdle` directory, activate your virtual environment:
-- **Linux/macOS:** `source .venv/bin/activate`
-- **Windows:** `.venv\Scripts\activate`
-
-Run the game with `python main.py` or `uv run main.py`.
+Run the game with `uv run main.py`.
 
 ## To do
 
@@ -41,3 +22,4 @@ Run the game with `python main.py` or `uv run main.py`.
 - [x] separate word lists for valid guesses and potential target words
 - [ ] keyboard shortcut to exit the game
 - [ ] keyboard shortcut to return to the main menu
+- [ ] display letters at the bottom of the terminal and remove ones that have been guessed and are not in the target word
