@@ -1,5 +1,5 @@
 from .theme import console
-from .terdify import terd_green
+from .terdify import terd_correct
 
 
 # Simple True or False check for win
@@ -12,7 +12,7 @@ def is_win(word, guess):
 
 def display_win():
     console.print("")
-    console.print(terd_green("G O O D  J O B !"))
+    console.print(terd_correct("G O O D  J O B !"))
 
 
 def display_lose(word):

@@ -10,7 +10,7 @@ def terdify(string):
     return terd
 
 
-def terd_green(word):
+def terd_correct(word):
     if isinstance(word, list):
         terd = Text()
         for block in word:
@@ -27,7 +27,7 @@ def terd_green(word):
         return terd
 
 
-def terd_yellow(word):
+def terd_present(word):
     if isinstance(word, list):
         terd = Text()
         for block in word:
@@ -44,7 +44,7 @@ def terd_yellow(word):
         return terd
 
 
-def terd_white(word):
+def terd_absent(word):
     if isinstance(word, list):
         terd = Text()
         for block in word:

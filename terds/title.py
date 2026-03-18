@@ -3,18 +3,18 @@ import random
 from rich.text import Text
 from rich.live import Live
 from .theme import console
-from .terdify import terd_green, terd_yellow, terd_white
+from .terdify import terd_correct, terd_present, terd_absent
 
 
 def animate_title():
     title_str = "TERDLE"
-    style_funcs = [terd_green, terd_yellow, terd_white]
+    style_funcs = [terd_correct, terd_present, terd_absent]
 
     def get_frame(final=False):
         text = Text()
         for char in title_str:
             if final:
-                text.append(terd_green(char))
+                text.append(terd_correct(char))
             else:
                 text.append(random.choice(style_funcs)(char))
         return text
