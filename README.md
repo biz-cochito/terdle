@@ -1,6 +1,6 @@
-# TERDLE
-
 ![Terdle Title](images/title.gif)
+
+# TERDLE
 
 ## Installation
 ```bash
@@ -14,13 +14,16 @@ Run the game with `uv run main.py`.
 ## To do
 
 ### Game logic
+- [x] correct handling of duplicate letters
 - [x] restrict guesses to valid words
 - [x] separate word lists for valid guesses and potential target words
 
 ### UI
 - [x] start menu
 - [x] title animation
-- [x] display letters at the bottom of the terminal and remove ones that have been guessed and are not in the target word
+- [x] display available letters
+- [ ] center terminal output
+- [ ] animate win message
 
 ### Input
 - [x] allow cursor movement with arrow keys on guess input
@@ -29,7 +32,7 @@ Run the game with `uv run main.py`.
 - [ ] keyboard shortcut to return to the main menu
 
 ### Settings and configuration
-- [ ] alternative color settings for terminals with incompatible color schemes
+- [ ] color themes
 - [ ] choose word length
 
 ### Stats
