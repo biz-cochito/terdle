@@ -25,23 +25,26 @@ Run the game with `uv run main.py`.
 - [x] start menu
 - [x] title animation
 - [x] display available letters
-- [ ] center terminal output
+- [ ] center output within the terminal
 - [ ] animate winning guess
 - [ ] highlight active selection in start menu
+- [x] replace explicit references to colors with "style_correct", etc.
+- [ ] replace repeating "Attempt X/6: " with a single line that gets updated
 
 ### Input
 
 - [x] allow cursor movement with arrow keys on guess input
 - [ ] "?" key to show keyboard shortcuts
-- [ ] kb shortcut to exit the game
-- [ ] kb shortcut to return to the main menu
+- [x] kb shortcut to exit the game
+- [x] kb shortcut to return to the main menu
 - [ ] kb shortcut to redraw UI
 
 ### Settings and configuration
 
 - [ ] color themes
 - [ ] choose word length
-- [ ] disable animation
+- [ ] toggle animations
+- [ ] disable tutorial message
 
 ### Stats
 
