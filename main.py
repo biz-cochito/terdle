@@ -23,7 +23,9 @@ def play_game():
 
     attempts = 6
     attempt = 0
+    absent_letters = set()
     while attempt < attempts:
+        terds.draw_alphabet(absent_letters)
         guess = input(f"Attempt {attempt + 1}/{attempts}: ").upper()
 
         if len(guess) != len(word):
@@ -36,13 +38,19 @@ def play_game():
 
         attempt += 1
 
+        for c in guess:
+            if c not in word:
+                absent_letters.add(c)
+
         feedback = terds.score_guess(word, guess)
         terds.console.print(feedback)
 
         if terds.is_win(word, guess):
+            terds.clear_alphabet()
             terds.display_win()
             break
     else:
+        terds.clear_alphabet()
         terds.display_lose(word)
         
     input("Press Enter to return to the main menu...")
