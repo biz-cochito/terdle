@@ -88,9 +88,10 @@ def main():
 
         terds.console.print("[bold cyan]--- Main Menu ---[/bold cyan]")
 
+        color_selected = f"fg:ansi{terds.theme.style_correct.bgcolor.name}"
+        color_muted = f"fg:ansi{terds.theme.style_absent.bgcolor.name}"
         custom_style = questionary.Style(
-            # replace "green" by getting the user's "style_correct" color
-            [("instruction", "fg:#808080"), ("pointer", "fg:green")]
+            [("instruction", color_muted), ("pointer", color_selected)]
         )
 
         choice = questionary.select(
