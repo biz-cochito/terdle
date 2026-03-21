@@ -58,7 +58,7 @@ def play_game():
 
         if terds.is_win(word, guess):
             terds.clear_alphabet()
-            terds.display_win()
+            terds.display_win(guess)
             break
     else:
         terds.clear_alphabet()
