@@ -1,6 +1,7 @@
 import random
 import readline
 import terds
+from terds.win_lose import is_win
 from util.shell_commands import clear_terminal
 import questionary
 
@@ -53,8 +54,9 @@ def play_game():
             if c not in word:
                 absent_letters.add(c)
 
-        feedback = terds.score_guess(word, guess)
-        terds.console.print(feedback)
+        if not terds.is_win(word, guess):
+            feedback = terds.score_guess(word, guess)
+            terds.console.print(feedback)
 
         if terds.is_win(word, guess):
             terds.clear_alphabet()
