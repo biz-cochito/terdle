@@ -9,4 +9,10 @@ wheels/
 # Virtual environments
 .venv
 
+# for later
+restructure.md
+old/
+data/
+core/
 docs/
+
